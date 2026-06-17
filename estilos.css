@@ -1,0 +1,106 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    background:linear-gradient(135deg,#001f54,#004aad,#0077ff,#4da6ff);
+    background-size:400% 400%;
+    animation:fondo 12s ease infinite;
+    overflow:hidden;
+}
+
+/* Animación del fondo */
+@keyframes fondo{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+/* Tarjeta */
+
+.tarjeta{
+    width:720px;
+    max-width:90%;
+    background:rgba(255,255,255,.18);
+    backdrop-filter:blur(18px);
+    border-radius:25px;
+    padding:40px;
+    color:white;
+    text-align:center;
+    box-shadow:0 0 30px rgba(0,0,0,.4);
+    border:2px solid rgba(255,255,255,.25);
+}
+
+h1{
+    font-size:45px;
+    margin-bottom:20px;
+    color:#fff;
+    text-shadow:0 0 15px #87cefa;
+}
+
+.poema{
+    font-size:22px;
+    line-height:1.9;
+    color:white;
+}
+
+/* Corazones */
+
+.corazon{
+    position:absolute;
+    font-size:35px;
+    animation:subir 8s linear infinite;
+}
+
+.c1{
+    left:8%;
+    color:#ff1744;
+    animation-delay:0s;
+}
+
+.c2{
+    left:25%;
+    color:#ff66c4;
+    animation-delay:2s;
+}
+
+.c3{
+    left:45%;
+    color:#ff4081;
+    animation-delay:4s;
+}
+
+.c4{
+    left:70%;
+    color:#ff80ab;
+    animation-delay:1s;
+}
+
+.c5{
+    left:90%;
+    color:#d500f9;
+    animation-delay:3s;
+}
+
+@keyframes subir{
+    0%{
+        transform:translateY(110vh) scale(.8);
+        opacity:0;
+    }
+
+    20%{
+        opacity:1;
+    }
+
+    100%{
+        transform:translateY(-120vh) scale(1.5) rotate(360deg);
+        opacity:0;
+    }
+}
